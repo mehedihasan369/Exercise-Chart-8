@@ -1,6 +1,11 @@
 .info{
-    padding: 100px;
-    width: 20%;
+background-color: rgb(80, 168, 80);
+}
+
+.border{
+    border: 2px;
+    border-radius: 5px;
+
 }
 
 @media only screen and (max-width: 600px) {

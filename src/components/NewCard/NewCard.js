@@ -6,8 +6,8 @@ const NewCard = (props) => {
         <div className='img-bg   col-3  m-1 p-2'>
             <img src={img} alt="" className='w-100 h-75' />
             <div className='w-100 h-50'>
-            <h3>{name}</h3>
-            <h5>Time required : {time}</h5>
+            <p className='fs-5 fw-bold'>{name}</p>
+            <p className=''>Time required : {time} minutes</p>
             
             </div>
             <button className='btn btn-outline-success text-dark fw-bold '>Add to list</button>
