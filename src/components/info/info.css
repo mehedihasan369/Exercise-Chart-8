@@ -1,0 +1,11 @@
+.info{
+    padding: 100px;
+    width: 20%;
+}
+
+@media only screen and (max-width: 600px) {
+    .info{
+        width: 50px;
+        padding: 50px;
+    }
+}
