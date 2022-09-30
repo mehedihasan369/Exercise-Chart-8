@@ -10,13 +10,16 @@ const Cards = (props) => { console.log(props)
         .then(res=> res.json())
         .then(data => setData(data))
     }, []);
+
+    const handleAddToInfo = (data) =>{
+        console.log(data);}
   
     return ( <div className='container1'>
         <div className='cardcompo container'>
             <h1 className='text-success'>Exercise Chart</h1>
              <h3>See todays exercise...</h3>
              <div className='cards row '>
-                {data.map(data => <NewCard  key={data.id} fullData={data}></NewCard>)}
+                {data.map(data => <NewCard  key={data.id} fullData={data} handleAddToInfo={handleAddToInfo}></NewCard>)}
                 </div>
              </div>
            <Info></Info>
