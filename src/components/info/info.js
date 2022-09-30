@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './info.css'
 
+
 const Info = () => {
+
+    // const [cart,setCart] = useState ([])
+
+    // useEffect( () =>{
+    //     fetch('./data.JSON')
+    //     .then(res=> res.json())
+    //     .then(data => setCart(data))
+    // }, []);
+
+    // const handleAddToCart =(data) => {console.log(data)}
+
+    
+
     return (
         <div className='info  text-light w-25 p-2'>
            <div className='p-3'>
@@ -35,10 +49,11 @@ const Info = () => {
                       <button className='btn btn-outline-light w-25  p-2 m-2 fw-bold'>8 min</button>
                        </div>
 
-                       <p className='fw-bold fs-4'>Exercise Details</p>  
+                       <p className='fw-bold fs-4'>Exercise Details</p>
+                       
 
                        <div className=' border m-2'>
-                       <p className='m-3'><span className='fw-bold fs-6'>Exercise time :  </span><span>shhzdhj</span></p>
+                       <p className='m-3'><span className='fw-bold fs-6'>Exercise time :  </span>  <span>   </span></p>
                        </div>
                        <div className=' border m-2'>
                        <p className='m-3'><span className='fw-bold fs-6'>Breaktime :  </span><span>shhzdhj</span></p>
