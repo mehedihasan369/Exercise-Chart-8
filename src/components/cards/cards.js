@@ -5,6 +5,7 @@ import './cards.css'
 
 const Cards = (props) => { console.log(props)
     const [data,setData] = useState([])
+    const [cart, setCart] = useState([])
     useEffect( () =>{
         fetch('./data.JSON')
         .then(res=> res.json())
@@ -12,7 +13,10 @@ const Cards = (props) => { console.log(props)
     }, []);
 
     const handleAddToInfo = (data) =>{
-        console.log(data);}
+        console.log(data);
+        const newCart = [...cart, data];
+        setCart(newCart)
+    }
   
     return ( <div className='container1'>
         <div className='cardcompo container'>
@@ -22,7 +26,7 @@ const Cards = (props) => { console.log(props)
                 {data.map(data => <NewCard  key={data.id} fullData={data} handleAddToInfo={handleAddToInfo}></NewCard>)}
                 </div>
              </div>
-           <Info></Info>
+           <Info cart={cart} ></Info>
 
         </div>
     );

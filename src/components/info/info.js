@@ -2,19 +2,16 @@ import React, { useEffect, useState } from 'react';
 import './info.css'
 
 
-const Info = () => {
+const Info = (props) => {
 
-    // const [cart,setCart] = useState ([])
+    const { cart } = props;
+    console.log(cart);
 
-    // useEffect( () =>{
-    //     fetch('./data.JSON')
-    //     .then(res=> res.json())
-    //     .then(data => setCart(data))
-    // }, []);
-
-    // const handleAddToCart =(data) => {console.log(data)}
-
-    
+    let total = 0;
+    for(const data of cart){
+        
+        total = total + data.time ;
+    }
 
     return (
         <div className='info  text-light w-25 p-2'>
@@ -53,7 +50,7 @@ const Info = () => {
                        
 
                        <div className=' border m-2'>
-                       <p className='m-3'><span className='fw-bold fs-6'>Exercise time :  </span>  <span>   </span></p>
+                       <p className='m-3'><span className='fw-bold fs-6'>Exercise time :  </span>  <span> {total}  </span></p>
                        </div>
                        <div className=' border m-2'>
                        <p className='m-3'><span className='fw-bold fs-6'>Breaktime :  </span><span>shhzdhj</span></p>
