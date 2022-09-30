@@ -17,7 +17,9 @@ const Cards = (props) => { console.log(props)
         const newCart = [...cart, data];
         setCart(newCart)
     }
-  
+
+
+    
     return ( <div className='container1'>
         <div className='cardcompo container'>
             <h1 className='text-success'>Exercise Chart</h1>
@@ -26,7 +28,7 @@ const Cards = (props) => { console.log(props)
                 {data.map(data => <NewCard  key={data.id} fullData={data} handleAddToInfo={handleAddToInfo}></NewCard>)}
                 </div>
              </div>
-           <Info cart={cart} ></Info>
+           <Info cart={cart}  ></Info>
 
         </div>
     );
